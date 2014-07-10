@@ -1,0 +1,15 @@
+﻿body 
+{
+    margin:0px;
+    padding:0px;
+}
+
+.error
+{
+    border: 3px solid #CC3300;
+}
+
+.sel
+{
+    border: 2px solid #93C8E1;
+}

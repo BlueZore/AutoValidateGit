@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-1.4.1.js" type="text/javascript"></script>
+    <link href="AutoValidate.css" rel="stylesheet" type="text/css" />
+    <link href="style01.css" rel="stylesheet" type="text/css" />
+    <script src="style.js" type="text/javascript"></script>
+    <script src="AutoValidate.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            $("#addd").click(function () {
+                $(this).parent().append("<input  type='text' vfun='nonull'  vgro='xst'/>");
+            });
+
+            
+        });
+        $("#vldBtn").click(function () {
+            ValidateExe(this);
+        });
+    </script>
+</head>
+<body>
+<form id="form1">
+<ul class="tab_ul">
+    <li>
+    <p>姓名：</p>
+    <p><input id="name" type="text" vfun="nonull" verr="okokok!!!" vapp="y" vrig="格式蜚蜚蜚暃蜚暃暃蜚暃暃蜚暃昦" vex="findname" /></p>
+    </li>
+    <li>
+    <p>年龄：</p>
+    <p><input id="age" type="text" vfun="age" /></p>
+    </li>
+    <li>
+    <p>日期：</p>
+    <p><input id="date" type="text" vfun="ndate" /></p>
+    </li>
+    <li>
+    <p>金钱：</p>
+    <p><input id="price" type="text" vfun="nprice" /></p>
+    </li>
+    <li>
+    <p>邮箱：</p>
+    <p><input id="email" type="text" vfun="email" /></p>
+    </li>
+    <li>
+    <p>邮编：</p>
+    <p><input id="post" type="text" vfun="post" /></p>
+    </li>
+    <li>
+    <p>电话：</p>
+    <p><input id="phone" type="text" vfun="phone" len="10" /></p>
+    </li>
+    <li>
+    <p>身份证：</p>
+    <p><input id="card" type="text" vfun="card" /></p>
+    </li>
+    <li>
+    <p>时间：</p>
+    <p><input id="time" type="text" vfun="ntime" /></p>
+    </li>
+    <li>
+    <p>数字：</p>
+    <p><input id="math" type="text" vfun="nmath" /></p>
+    </li>
+    <li>
+    <p>网址：</p>
+    <p><input id="url" type="text" vfun="url" vgro="xst" /></p>
+    </li>
+    <li>
+    <p>账号：</p>
+    <p><input id="an" type="text" vfun="nan" /></p>
+    </li>
+    <li>
+    <p>自定义：</p>
+    <p><input id="Text1" type="text" vfun="adj" vadj=/^(\d{11})$/ verr="电话错误" /></p>
+    </li>
+    <li style="height:60px">
+    <p>文本长度限制：</p>
+    <p><textarea id="len" style="width:300px; height:50px;" vlen="50" vfun="nonull"></textarea></p>
+    </li>
+    <li>
+    <p>下拉框：</p>
+    <p><select id="ddl" vfun="ddl" vbla="0"><option>请选择</option><option value="1">中国</option></select></p>
+    </li>
+    <li>
+    <p>方形复选框：</p>
+    <p><input type="checkbox" id="check1" vfun="check" value="1" /><label for="check1">是</label></p>
+    </li>
+    <li>
+    <p>圆形复选框：</p>
+    <p><input type="radio" id="radio1" vfun="radio" value="1" /><label for="radio1">是</label></p>
+    </li>
+    <li>
+    <p>方形复选框：</p>
+    <p><input type="checkbox" id="Checkbox1" vfun="checkgroup" name="dsa" value="1"  verr="必须选一个" vapp="y"/><label for="Checkbox1">是</label><input type="checkbox" id="Checkbox2" name="dsa" vfun="checkgroup" value="1" /><label for="Checkbox2">是</label></p>
+    </li>
+    <li>
+    <p>圆形复选框：</p>
+    <p><input type="radio" id="radio2" vfun="radiogroup" name="asd" value="1" /><label for="radio2">是</label><input type="radio" id="radio3" name="asd" vfun="radiogroup" value="1" /><label for="radio3">是</label></p>
+    </li>
+
+    <li>
+    <input id="addd"  type="button" />
+    </li>
+    
+    <li>
+    <input id="vldBtn" type="button" value="确认" vgro="xst" />
+    </li>
+    </ul>
+    </form>
+</body>
+</html>
